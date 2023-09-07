@@ -1,0 +1,353 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+//#pragma file_not_in_maxplusii_format
+(header "graphic" (version "1.3"))
+(pin
+	(input)
+	(rect 240 40 408 56)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "I2C_CLK" (rect 5 0 49 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 240 72 408 88)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "RESETN" (rect 5 0 48 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(bidir)
+	(rect 744 208 920 224)
+	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "SCL" (rect 90 0 111 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4)(line_width 1))
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 56 12)(pt 78 12)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+		(line (pt 56 4)(pt 52 8)(line_width 1))
+		(line (pt 52 8)(pt 56 12)(line_width 1))
+	)
+	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(bidir)
+	(rect 744 192 920 208)
+	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "SDA" (rect 90 0 112 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4)(line_width 1))
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 56 12)(pt 78 12)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+		(line (pt 56 4)(pt 52 8)(line_width 1))
+		(line (pt 52 8)(pt 56 12)(line_width 1))
+	)
+	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
+)
+(symbol
+	(rect 552 120 728 280)
+	(text "i2c_master" (rect 5 0 59 12)(font "Arial" ))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset_n" (rect 0 0 36 12)(font "Arial" ))
+		(text "reset_n" (rect 21 43 57 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ena" (rect 0 0 17 12)(font "Arial" ))
+		(text "ena" (rect 21 59 38 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "addr[6..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "addr[6..0]" (rect 21 75 68 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "rw" (rect 0 0 10 12)(font "Arial" ))
+		(text "rw" (rect 21 91 31 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "data_wr[7..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "data_wr[7..0]" (rect 21 107 84 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "busy" (rect 0 0 24 12)(font "Arial" ))
+		(text "busy" (rect 131 27 155 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 1))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "data_rd[7..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "data_rd[7..0]" (rect 93 43 155 55)(font "Arial" ))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(port
+		(pt 176 64)
+		(output)
+		(text "ack_error" (rect 0 0 46 12)(font "Arial" ))
+		(text "ack_error" (rect 109 59 155 71)(font "Arial" ))
+		(line (pt 176 64)(pt 160 64)(line_width 1))
+	)
+	(port
+		(pt 176 80)
+		(bidir)
+		(text "sda" (rect 0 0 17 12)(font "Arial" ))
+		(text "sda" (rect 138 75 155 87)(font "Arial" ))
+		(line (pt 176 80)(pt 160 80)(line_width 1))
+	)
+	(port
+		(pt 176 96)
+		(bidir)
+		(text "scl" (rect 0 0 14 12)(font "Arial" ))
+		(text "scl" (rect 141 91 155 103)(font "Arial" ))
+		(line (pt 176 96)(pt 160 96)(line_width 1))
+	)
+	(parameter
+		"input_clk"
+		"400000"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"bus_clk"
+		"100000"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 160 144)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 728 72 904 120))
+)
+(symbol
+	(rect 560 16 720 112)
+	(text "i2c_oneshot_ctrl" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst3" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "resetn" (rect 0 0 30 12)(font "Arial" ))
+		(text "resetn" (rect 21 27 51 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "i2c_busy" (rect 0 0 44 12)(font "Arial" ))
+		(text "i2c_busy" (rect 21 59 65 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "tx_addr[7..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "tx_addr[7..0]" (rect 77 27 139 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "tx_byte[7..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "tx_byte[7..0]" (rect 76 43 139 55)(font "Arial" ))
+		(line (pt 160 48)(pt 144 48)(line_width 3))
+	)
+	(port
+		(pt 160 64)
+		(output)
+		(text "comm_en" (rect 0 0 48 12)(font "Arial" ))
+		(text "comm_en" (rect 91 59 139 71)(font "Arial" ))
+		(line (pt 160 64)(pt 144 64)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 80)(line_width 1))
+	)
+)
+(symbol
+	(rect 448 224 480 256)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst4" (rect 3 21 26 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0)(line_width 1))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16)(line_width 1))
+		(line (pt 16 16)(pt 24 8)(line_width 1))
+		(line (pt 8 8)(pt 24 8)(line_width 1))
+	)
+)
+(connector
+	(text "clk" (rect 498 136 512 148)(font "Arial" ))
+	(pt 552 152)
+	(pt 488 152)
+)
+(connector
+	(text "resetn" (rect 498 152 528 164)(font "Arial" ))
+	(pt 552 168)
+	(pt 488 168)
+)
+(connector
+	(text "i2c_ena" (rect 498 168 535 180)(font "Arial" ))
+	(pt 552 184)
+	(pt 488 184)
+)
+(connector
+	(text "tx_byte[7..0]" (rect 498 216 561 228)(font "Arial" ))
+	(pt 488 232)
+	(pt 552 232)
+	(bus)
+)
+(connector
+	(pt 728 216)
+	(pt 744 216)
+)
+(connector
+	(pt 728 200)
+	(pt 744 200)
+)
+(connector
+	(text "i2c_busy" (rect 738 136 782 148)(font "Arial" ))
+	(pt 728 152)
+	(pt 792 152)
+)
+(connector
+	(text "rx_byte[7..0]" (rect 738 152 801 164)(font "Arial" ))
+	(pt 728 168)
+	(pt 792 168)
+	(bus)
+)
+(connector
+	(text "i2c_error" (rect 738 168 780 180)(font "Arial" ))
+	(pt 728 184)
+	(pt 792 184)
+)
+(connector
+	(text "tx_addr[7..1]" (rect 498 184 560 196)(font "Arial" ))
+	(pt 552 200)
+	(pt 488 200)
+	(bus)
+)
+(connector
+	(text "resetn" (rect 506 32 536 44)(font "Arial" ))
+	(pt 560 48)
+	(pt 496 48)
+)
+(connector
+	(text "clk" (rect 506 48 520 60)(font "Arial" ))
+	(pt 560 64)
+	(pt 496 64)
+)
+(connector
+	(text "i2c_busy" (rect 506 64 550 76)(font "Arial" ))
+	(pt 560 80)
+	(pt 496 80)
+)
+(connector
+	(text "tx_addr[7..0]" (rect 730 32 792 44)(font "Arial" ))
+	(pt 720 48)
+	(pt 784 48)
+	(bus)
+)
+(connector
+	(text "tx_byte[7..0]" (rect 730 48 793 60)(font "Arial" ))
+	(pt 720 64)
+	(pt 784 64)
+	(bus)
+)
+(connector
+	(text "i2c_ena" (rect 730 64 767 76)(font "Arial" ))
+	(pt 784 80)
+	(pt 720 80)
+)
+(connector
+	(text "clk" (rect 418 32 432 44)(font "Arial" ))
+	(pt 408 48)
+	(pt 456 48)
+)
+(connector
+	(text "resetn" (rect 418 64 448 76)(font "Arial" ))
+	(pt 408 80)
+	(pt 456 80)
+)
+(connector
+	(text "i2c_rnw" (rect 498 200 534 212)(font "Arial" ))
+	(pt 464 216)
+	(pt 552 216)
+)
+(connector
+	(pt 464 216)
+	(pt 464 224)
+)
